@@ -24,10 +24,23 @@ const IndexLayout = ({ course, posts }: Props) => {
     case 'spapp':
       courseName = 'スマートフォンアプリ';
       break;
+    case 'unity':
+      courseName = 'Unity ゲーム開発';
+      break;
     case 'others':
       courseName = 'その他';
       break;
   }
+
+  const navItems = posts.map(post => (
+    <div className="mb-2" key={post.path}>
+      <Card href={post.path} hover={true} flex={false} >
+        <div className="p-4">
+          {post.title} →
+        </div>
+      </Card>
+    </div>
+  ))
 
   return <>
     <Layout>
@@ -49,15 +62,7 @@ const IndexLayout = ({ course, posts }: Props) => {
           </div>
 
           <div className="mt-5">
-            {posts.map(post => (
-              <div className="mb-2">
-                <Card href={post.path} hover={true} flex={false} >
-                  <div className="p-4">
-                    {post.title} →
-                  </div>
-                </Card>
-              </div>
-            ))}
+            {navItems}
           </div>
 
         </div>

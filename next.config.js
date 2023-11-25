@@ -1,3 +1,7 @@
+/**
+ * @type {import('next').NextConfig}
+*/
+
 require('dotenv').config();
 
 module.exports = {
