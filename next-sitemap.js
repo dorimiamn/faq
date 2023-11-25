@@ -1,4 +1,4 @@
 module.exports = {
-  siteUrl: 'https://nnn-training.github.io/faq/',
+  siteUrl: 'https://dorimiamn.github.io/faq/',
   generateRobotsTxt: false,
 };
